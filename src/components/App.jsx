@@ -6,9 +6,10 @@ import Card from "./Card.jsx";
 // card area
 
 function App() {
+  const [cardsArr, setCardsArr] = useState([{name:"name", imageInfo:"./test.jpg"}]);
   return (
     <>
-      <Card/>
+      <Card data={cardsArr[0]}/>
     </>
   );
 }

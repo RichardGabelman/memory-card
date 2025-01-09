@@ -14,6 +14,7 @@ function Card({ data, revealed, completed, onClick }) {
         <h1>{name}</h1>
         <h3>{imageInfo}</h3>
         <h3>{id}</h3>
+        <h4>{completed ? "Completed" : "Not Completed"}</h4>
       </div>
     );
   }

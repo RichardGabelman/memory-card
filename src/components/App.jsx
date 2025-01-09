@@ -9,7 +9,7 @@ function App() {
   const [cardsArr, setCardsArr] = useState([{name:"name", imageInfo:"./test.jpg"}]);
   return (
     <>
-      <Card data={cardsArr[0]}/>
+      <Card data={cardsArr[0]} revealed={true}/>
     </>
   );
 }

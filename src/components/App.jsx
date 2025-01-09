@@ -5,56 +5,47 @@ import Card from "./Card.jsx";
 // score + reset button area
 // card area
 
-let cardsArr = [
+let defaultCardsArr = [
   {name: "France", imageInfo: "./france.jpg", id: 0},
-  {name: "French Flag", imageInfo: "./frenchFlag.jpg", id: 1},
+  {name: "Japan", imageInfo: "./japan.jpg", id: 1},
   {name: "Germany", imageInfo: "./germany.jpg", id: 2},
-  {name: "German Flag", imageInfo: "./germanFlag.jpg", id: 3}
+  {name: "Russia", imageInfo: "./russia.jpg", id: 3},
+  {name: "Mexico", imageInfo: "./mexico.jpg", id: 4},
+  {name: "United States", imageInfo: "./unitedstates.jpg", id: 5},
 ]
 
-// pairs[idx] is the id of the matching card
-const pairs = [1, 0, 3, 2]
-
 function App() {
+  const [cardsArr, setCardsArr] = useState(defaultCardsArr);
   const [currentScore, setCurrentScore] = useState(0);
   const [highScore, setHighScore] = useState(0);
-  const [revealedArr, setRevealedArr] = useState([]);
-  const [completedArr, setCompletedArr] = useState([]);
+  const [clickedArr, setClickedArr] = useState([]);
 
   const handleCardClick = (id) => {
-    if (revealedArr.length >= 2) {
-      setRevealedArr([id])
-    } else if (revealedArr.length == 0) {
-      setRevealedArr([id]);
-    } else {
-      if (revealedArr[0] != id) {
-        setRevealedArr([revealedArr[0], id])
-        handleBothCards(revealedArr[0], id);
-      }
-    }
+    console.log(id + " clicked");
   }
 
-  const handleBothCards = (idOne, idTwo) => {
-    if (pairs[idOne] == idTwo) {
-      setCurrentScore(currentScore + 1);
-      setCompletedArr([...completedArr, idOne, idTwo]);
-      if ((currentScore + 1) > highScore) {
-        setHighScore(currentScore + 1);
-      }
-    } else {
-      setCurrentScore(0);
-    }
+  const handleSuccess = (id) => {
+
+  }
+
+  const handleFailure = (id) => {
+
   }
 
   return (
     <>
+      <header>
+        <h1>Memory Game</h1>
+        <div id="scores">
+          <h2>Current Score: {currentScore}</h2>
+          <h2>High Score: {highScore}</h2>
+        </div>
+      </header>
       <div className="cardHolder">
         {cardsArr.map((card) => (
           <Card 
             data={card} 
             key={card.id} 
-            revealed={revealedArr.includes(card.id)} 
-            completed={completedArr.includes(card.id)}
             onClick={handleCardClick}/>
         ))}
       </div>

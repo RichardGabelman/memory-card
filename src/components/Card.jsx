@@ -1,7 +1,8 @@
+import '../styles/Card.css';
 // score + reset button area
 // card area
 
-function Card({ data, revealed, completed }) {
+function Card({ data, revealed, completed, onClick }) {
 
   const name = data.name;
   const imageInfo = data.imageInfo;
@@ -18,9 +19,9 @@ function Card({ data, revealed, completed }) {
   }
 
   return (
-    <>
+    <div className="card" onClick={() => onClick(id)}>
       <h1>Face Down</h1>
-    </>
+    </div>
   );
 }
 

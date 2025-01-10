@@ -11,5 +11,6 @@ body, html {
 #root {
   height: 100%;
   display: grid;
-  grid-template-rows: 1fr 7fr;
+  grid-template-rows: 1fr 8fr;
+  background-color: grey;
 }

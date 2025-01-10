@@ -12,7 +12,6 @@ function Card({ data, onClick }) {
     <div className="card" onClick={() => onClick(id)}>
       <h1>{name}</h1>
       <h3>{imageInfo}</h3>
-      <h3>{id}</h3>
     </div>
   );
 }

@@ -2,6 +2,26 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  padding: 30px;
+  padding: 25px;
+  padding-top: 0px;
   gap: 25px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 60px;
+}
+
+header h1 {
+  font-size: 46px;
+}
+
+header h1:hover {
+  cursor: pointer;
+}
+
+h2 {
+  text-align: right;
 }

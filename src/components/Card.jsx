@@ -5,13 +5,13 @@ import '../styles/Card.css';
 function Card({ data, onClick }) {
 
   const name = data.name;
-  const imageInfo = data.imageInfo;
   const id = data.id;
+  const imgSrc = "https://flagsapi.com/" + data.countryCode + "/shiny/64.png";
 
   return (
     <div className="card" onClick={() => onClick(id)}>
       <h1>{name}</h1>
-      <h3>{imageInfo}</h3>
+      <img src={imgSrc} />
     </div>
   );
 }

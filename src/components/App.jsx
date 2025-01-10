@@ -6,18 +6,18 @@ import Card from "./Card.jsx";
 // card area
 
 let defaultCardsArr = [
-  { name: "France", imageInfo: "./france.jpg", id: 0 },
-  { name: "Japan", imageInfo: "./japan.jpg", id: 1 },
-  { name: "Germany", imageInfo: "./germany.jpg", id: 2 },
-  { name: "Russia", imageInfo: "./russia.jpg", id: 3 },
-  { name: "Mexico", imageInfo: "./mexico.jpg", id: 4 },
-  { name: "United States", imageInfo: "./unitedstates.jpg", id: 5 },
-  { name: "India", imageInfo: "./india.jpg", id: 6},
-  { name: "Brazil", imageInfo: "./brazil.jpg", id: 7},
-  { name: "China", imageInfo: "./china.jpg", id: 8},
-  { name: "Indonesia", imageInfo: "./indonesia.jpg", id: 9},
-  { name: "Pakistan", imageInfo: "./pakistan.jpg", id: 10}, 
-  { name: "Bangladesh", imageInfo: "./bangladesh.jpg", id: 11}
+  { name: "France", countryCode: "FR", id: 0 },
+  { name: "Japan", countryCode: "JP", id: 1 },
+  { name: "Germany", countryCode: "DE", id: 2 },
+  { name: "Russia", countryCode: "RU", id: 3 },
+  { name: "Mexico", countryCode: "MX", id: 4 },
+  { name: "United States", countryCode: "US", id: 5 },
+  { name: "India", countryCode: "IN", id: 6},
+  { name: "Brazil", countryCode: "BR", id: 7},
+  { name: "China", countryCode: "CN", id: 8},
+  { name: "Indonesia", countryCode: "ID", id: 9},
+  { name: "Pakistan", countryCode: "PK", id: 10}, 
+  { name: "Bangladesh", countryCode: "BD", id: 11}
 ];
 
 const arrShuffle = (arr) => {

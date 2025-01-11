@@ -12,12 +12,12 @@ let defaultCardsArr = [
   { name: "Russia", countryCode: "RU", id: 3 },
   { name: "Mexico", countryCode: "MX", id: 4 },
   { name: "United States", countryCode: "US", id: 5 },
-  { name: "India", countryCode: "IN", id: 6},
-  { name: "Brazil", countryCode: "BR", id: 7},
-  { name: "China", countryCode: "CN", id: 8},
-  { name: "Indonesia", countryCode: "ID", id: 9},
-  { name: "Pakistan", countryCode: "PK", id: 10}, 
-  { name: "Bangladesh", countryCode: "BD", id: 11}
+  { name: "India", countryCode: "IN", id: 6 },
+  { name: "Brazil", countryCode: "BR", id: 7 },
+  { name: "China", countryCode: "CN", id: 8 },
+  { name: "Indonesia", countryCode: "ID", id: 9 },
+  { name: "Pakistan", countryCode: "PK", id: 10 },
+  { name: "Bangladesh", countryCode: "BD", id: 11 },
 ];
 
 const arrShuffle = (arr) => {
@@ -61,10 +61,17 @@ function App() {
     setClickedArr([]);
   };
 
+  const shuffle = () => {
+    setCardsArr(arrShuffle(cardsArr));
+  };
+
   return (
     <>
       <header>
-        <h1>Memory Game</h1>
+        <div id="left">
+          <h1>Memory Game</h1>
+          <button onClick={shuffle}>Shuffle</button>
+        </div>
         <div id="scores">
           <h2>Current Score: {currentScore}</h2>
           <h2>High Score: {highScore}</h2>

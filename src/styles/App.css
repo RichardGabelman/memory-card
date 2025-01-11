@@ -14,12 +14,24 @@ header {
   padding: 0px 60px;
 }
 
+#left {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
 header h1 {
   font-size: 46px;
 }
 
 header h1:hover {
   cursor: pointer;
+}
+
+button {
+  width: 150px;
+  height: 50px;
+  font-size: 20px;
 }
 
 h2 {
